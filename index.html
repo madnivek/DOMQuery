@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./lib/dom_query.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $l(() => alert('the document is ready'));
+      $l(() => alert('second'));
+      $l(() => alert('third'));
+    </script>
+  </head>
+  <body>
+
+    <div>This is a Div
+      <ul class="city-names two">City Names
+        <li class="nyc">NYC</li>
+        <li class="den">Denver</li>
+        <li class="chi">Chicago</li>
+        <li class="miam">Miami</li>
+      </ul>
+      <ul class="colors">Colors
+        <li><a href="#">Green</a></li>
+        <li><a href="#">Blue</a></li>
+        <li><a href="#">Rouge</a></li>
+        <li><a href="#">Teal</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaoJtEGlzPmeUQiCpFIsMkpYR_ebeU5aAnuzpXRX-shdPO3OEjv1soKtw">
+    </div>
+
+  </body>
+</html>
