@@ -1,5 +1,7 @@
 # DOMQuery
 
+![Live Demo](https://github.com/madnivek/SnakeGame)
+
 ## a simple, easy-to-use JavaScript API for HTML DOM manipulation.
 
 DOMQuery is a small JavaScript library, built for quick and efficient HTML document traversal, manipulation, event-handling, and AJAX requests.
