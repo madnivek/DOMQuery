@@ -1,6 +1,6 @@
 # DOMQuery
 
-![Live Demo](https://github.com/madnivek/SnakeGame)
+[Live Demo](https://github.com/madnivek/SnakeGame)
 
 ## a simple, easy-to-use JavaScript API for HTML DOM manipulation.
 
