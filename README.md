@@ -150,3 +150,9 @@ $l.ajax({
   }
   });
 ```
+
+#### Features To Be Implemented
+
+* Ability to create DOM elements by passing in a HTML string
+* Simple selector functions such as `first`, `last`, `nth-child`, etc...
+* `filter` function that will allow filtering of HTML elements by a specific selector
