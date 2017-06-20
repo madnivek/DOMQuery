@@ -9,7 +9,6 @@ const runFunctions = () => {
 
 document.addEventListener("DOMContentLoaded", runFunctions);
 
-
 window.$l = argument => {
   if (typeof argument === 'string') {
     const selectorList = document.querySelectorAll(argument);
@@ -25,7 +24,6 @@ window.$l = argument => {
     }
   }
 };
-
 
 $l.extend = (...objects) => {
   return Object.assign(...objects);
@@ -48,30 +46,18 @@ $l.ajax = (options) => {
     options.url += "?" + toQueryString(options.data);
   }
 
-  const xhr = new XMLHttpRequest();
-  xhr.open(options.method, options.url);
-
-  let promise;
-
-  xhr.onload = () => {
-    if(xhr.status === 200){
-      options.success(xhr.response);
-    } else {
-      options.error(xhr.response);
-    }
-
-    promise = new Promise( (resolve, reject) => {
+  return new Promise( () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(options.method, options.url);
+    xhr.onload = () => {
       if(xhr.status === 200){
-        resolve(xhr.response);
+        options.success(xhr.response);
       } else {
-        reject(xhr.response);
+        options.error(xhr.response);
       }
-    });
-  };
-
-  xhr.send(JSON.stringify(options.data));
-
-  return promise;
+    };
+    xhr.send(JSON.stringify(options.data));
+  });
 };
 
 const toQueryString = (data) => {
